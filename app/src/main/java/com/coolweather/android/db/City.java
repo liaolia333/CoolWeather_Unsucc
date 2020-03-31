@@ -39,6 +39,9 @@ public class City extends DataSupport {
     private String cityName; //省的名字
     private int cityCode; //省的代号
     private int provinceCode;
+
+    public void setProvinceId(int provinceId) {
+    }
 //    int id ：定位编号
 //    String cityName : 市的名字
 //    int cityCode : 市的代号
