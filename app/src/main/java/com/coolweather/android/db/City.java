@@ -3,6 +3,11 @@ package com.coolweather.android.db;
 import org.litepal.crud.DataSupport;
 
 public class City extends DataSupport {
+    private int id; //每个实体类都会有的标识符
+    private String cityName; //省的名字
+    private int cityCode; //省的代号
+    private int provinceId;
+
     public int getId() {
         return id;
     }
@@ -27,21 +32,16 @@ public class City extends DataSupport {
         this.cityCode = cityCode;
     }
 
-    public int getProvinceCode() {
-        return provinceCode;
+    public int getProvinceId() {
+        return provinceId;
     }
-
-    public void setProvinceCode(int provinceCode) {
-        this.provinceCode = provinceCode;
-    }
-
-    private int id; //每个实体类都会有的标识符
-    private String cityName; //省的名字
-    private int cityCode; //省的代号
-    private int provinceCode;
 
     public void setProvinceId(int provinceId) {
+        this.provinceId = provinceId;
     }
+
+
+
 //    int id ：定位编号
 //    String cityName : 市的名字
 //    int cityCode : 市的代号

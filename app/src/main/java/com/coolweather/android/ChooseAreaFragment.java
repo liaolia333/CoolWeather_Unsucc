@@ -37,7 +37,7 @@ import okhttp3.Callback;
 
 import okhttp3.Call;
 
-class ChooseAreaFragment extends Fragment {
+public class ChooseAreaFragment extends Fragment {
     /**
      * 宏定义试图的不同级别
      */
@@ -141,7 +141,7 @@ class ChooseAreaFragment extends Fragment {
             listView.setSelection(0);
             currentLevel = LEVEL_CITY;
         } else {
-            int provinceCode = selectedProvince.getProvinceCode();
+            int provinceCode = selectedProvince.getProvinceId();
             String address = "http://guolin.tech/api/china/" + provinceCode;
             queryFromServer(address, "city");
         }
@@ -163,7 +163,7 @@ class ChooseAreaFragment extends Fragment {
             listView.setSelection(0);
             currentLevel = LEVEL_COUNTY;
         } else {
-            int provinceCode = selectedProvince.getProvinceCode();
+            int provinceCode = selectedProvince.getProvinceId();
             int cityCode = selectedCity.getCityCode();
             String address = "http://guolin.tech/api/china/" + provinceCode + "/" + cityCode;
             queryFromServer(address, "county");

@@ -22,7 +22,7 @@ public class Utility {
                     JSONObject provinceObject = allProvinces.getJSONObject(i); // 获取每一个 JSON 对象
                     Province province = new Province();
                     province.setProvinceName(provinceObject.getString("name")); // 将 JSON 对象中的 name 字段赋给 ProvinceName
-                    province.setProvinceCode(provinceObject.getInt("id")); // 将 JSON 对象中的 id 字段赋给 ProvinceCode
+                    province.setProvinceId(provinceObject.getInt("id")); // 将 JSON 对象中的 id 字段赋给 ProvinceCode
                     province.save(); // 将数据存到数据库中
                 }
                 return true;
